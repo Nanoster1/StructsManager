@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="Algorithms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\Algorithms\bin\Debug\net5.0\Algorithms.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>

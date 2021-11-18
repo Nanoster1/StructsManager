@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructsConsole", "StructsConsole\StructsConsole.csproj", "{966DF288-0D24-4D2B-97C3-6763AB14C68D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructsManager", "StructsManager\StructsManager.csproj", "{DFD82F10-9469-4D1E-AEED-F6A8DA655081}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{966DF288-0D24-4D2B-97C3-6763AB14C68D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{966DF288-0D24-4D2B-97C3-6763AB14C68D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{966DF288-0D24-4D2B-97C3-6763AB14C68D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{966DF288-0D24-4D2B-97C3-6763AB14C68D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFD82F10-9469-4D1E-AEED-F6A8DA655081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFD82F10-9469-4D1E-AEED-F6A8DA655081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFD82F10-9469-4D1E-AEED-F6A8DA655081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFD82F10-9469-4D1E-AEED-F6A8DA655081}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

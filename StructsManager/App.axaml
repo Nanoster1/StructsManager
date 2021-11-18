@@ -1,0 +1,22 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:StructsManager"
+             x:Class="StructsManager.App"
+             xmlns:themes="clr-namespace:Material.Styles.Themes;assembly=Material.Styles">
+    <Application.DataTemplates>
+      <local:ViewLocator/>
+    </Application.DataTemplates>
+
+  <Application.Resources>
+    <themes:BundledTheme BaseTheme="Dark" PrimaryColor="LightBlue" SecondaryColor="Blue"/>
+  </Application.Resources>
+  
+  <Application.Styles>
+    <StyleInclude Source="avares://AvaloniaEdit/AvaloniaEdit.xaml"/>
+    <StyleInclude Source="avares://Material.Avalonia/Material.Avalonia.Templates.xaml"/>
+    <StyleInclude Source="/Styles/ProgressBar.axaml"/>
+    <Style Selector="Window">
+      <Setter Property="WindowStartupLocation" Value="CenterScreen"/>
+    </Style>
+  </Application.Styles>
+</Application>

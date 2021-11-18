@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\**" />
+    <None Remove=".gitignore" />
+    <None Remove="Assets\CommandsSyntax.xml" />
+    <None Remove="Assets\Fonts\Ruberoid-SemiBold.ttf" />
+    <None Remove="Assets\Icons\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.10" />
+    <PackageReference Include="Avalonia.AvaloniaEdit" Version="0.10.9" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.10" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.10" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.10" />
+    <PackageReference Include="Material.Avalonia" Version="2.4.1" />
+    <PackageReference Include="MessageBox.Avalonia" Version="1.5.5" />
+    <PackageReference Include="ReactiveUI" Version="16.3.9" />
+    <PackageReference Include="ReactiveUI.Fody" Version="16.3.9" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="StructsConsole">
+      <HintPath>..\..\Tester\StructsConsole\bin\Debug\net5.0\StructsConsole.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StructsConsole\StructsConsole.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Assets\Fonts\21063.otf" />
+    <UpToDateCheckInput Remove="Assets\Fonts\Ruberoid-SemiBold.ttf" />
+    <UpToDateCheckInput Remove="Assets\Fonts\Staccato555ttf.ttf" />
+  </ItemGroup>
+</Project>
