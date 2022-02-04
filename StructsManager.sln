@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructsConsole", "StructsConsole\StructsConsole.csproj", "{966DF288-0D24-4D2B-97C3-6763AB14C68D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructsManager.Logic", "StructsManager.Logic\StructsManager.Logic.csproj", "{966DF288-0D24-4D2B-97C3-6763AB14C68D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructsManager", "StructsManager\StructsManager.csproj", "{DFD82F10-9469-4D1E-AEED-F6A8DA655081}"
 EndProject

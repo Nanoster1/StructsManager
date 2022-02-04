@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StructsConsole
+namespace StructsManager.Logic
 {
     internal abstract class Operation
     {

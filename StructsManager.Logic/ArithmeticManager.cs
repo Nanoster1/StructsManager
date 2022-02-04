@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StructsConsole
+namespace StructsManager.Logic
 {
     public class ArithmeticManager
     {
@@ -39,6 +39,7 @@ namespace StructsConsole
 
         private List<object> ParseExpression(string text)
         {
+            text = text.Replace(" ", string.Empty);
             text = '⊥' + text + '⊥';
             List<object> expression = new List<object>();
             for (int i = 0; i < text.Length; i++)

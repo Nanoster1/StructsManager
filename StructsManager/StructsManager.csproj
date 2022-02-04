@@ -24,12 +24,12 @@
     <PackageReference Include="ReactiveUI.Fody" Version="16.3.9" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="StructsConsole">
-      <HintPath>..\..\Tester\StructsConsole\bin\Debug\net5.0\StructsConsole.dll</HintPath>
+    <Reference Include="StructsManager.Logic">
+      <HintPath>..\..\Tester\StructsManager.Logic\bin\Debug\net5.0\StructsManager.Logic.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\StructsConsole\StructsConsole.csproj" />
+    <ProjectReference Include="..\StructsManager.Logic\StructsManager.Logic.csproj" />
   </ItemGroup>
   <ItemGroup>
     <UpToDateCheckInput Remove="Assets\Fonts\21063.otf" />

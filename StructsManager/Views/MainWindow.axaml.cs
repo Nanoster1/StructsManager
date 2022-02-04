@@ -26,7 +26,6 @@ namespace StructsManager.Views
     public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
     {
         private TextEditor _textEditor;
-        private ProgressBar _progressBar;
 
         public MainWindow()
         {

@@ -9,7 +9,7 @@ using ReactiveUI;
 using System.Reactive;
 using System.Reactive.Linq;
 using StructsManager.Models;
-using StructsConsole;
+using StructsManager.Logic;
 using System.Threading.Tasks;
 using System.IO;
 using System.Collections.Specialized;

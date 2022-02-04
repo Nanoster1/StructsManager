@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace StructsConsole
+namespace StructsManager.Logic
 {
     public class CommandsElement
     {

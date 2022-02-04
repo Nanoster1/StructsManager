@@ -3,32 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace StructsConsole
+namespace StructsManager.Logic
 {
     public partial class CommandsManager
     {
-        public Task<List<CommandResult>> ActivateCommandsAsync(List<CommandsElement> commandsElements)
+        public Task<IEnumerable<CommandResult>> ActivateCommandsAsync(IEnumerable<CommandsElement> commandsElements)
         {
             return Task.Run(() => ActivateCommands(commandsElements));
         }
 
         private CommandResult ActivateOneCommand(CommandsElement commandsElement)
         {
-            return ActivateCommands(new List<CommandsElement>() {commandsElement}).First();
+            return ActivateCommands(new [] {commandsElement}).First();
         }
 
-        public List<CommandResult> ActivateCommands(List<CommandsElement> commandsElements)
+        public IEnumerable<CommandResult> ActivateCommands(IEnumerable<CommandsElement> commandsElements)
         {
             var results = new List<CommandResult>();
             foreach (var element in commandsElements)
             {
-                object result;
                 var currentStruct = Variables[element.Name];
                 foreach (var operation in element.Operations)
                 {
-                    var type = (currentStruct as Type) ?? currentStruct.GetType();
+                    var type = currentStruct as Type ?? currentStruct.GetType();
                     var op = type.GetMethod(operation) ?? type.GetProperty(operation)?.GetMethod;
 
+                    object result;
                     if (op is null)
                     {
                         result = type.GetField(operation)?.GetValue(currentStruct) ?? throw new NullReferenceException();
@@ -53,14 +53,16 @@ namespace StructsConsole
                                         return ActivateOneCommand(comElem).Result;
                                     return x;
                                 }).ToArray();
+                                
                                 var parameterType = parameters[i].ParameterType;
                                 var arrType = parameterType.GetElementType() ?? parameterType;
                                 var newArr = Array.CreateInstance(arrType, array.Length);
+                                
                                 for (int j = 0; j < array.Length; j++)
                                 {
                                     newArr.SetValue(array[j], j);
                                 }
-
+                                
                                 parameter = newArr;
                             }
 

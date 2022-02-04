@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace StructsConsole
+namespace StructsManager.Logic
 {
     public partial class CommandsManager
     {
@@ -89,16 +89,16 @@ namespace StructsConsole
         private object? ParseArg(string arg)
         {
             if (string.IsNullOrWhiteSpace(arg)) return null;
-            else if (arg[0] is '\"' && arg[^1] is '\"') return arg.Replace("\"", "");
-            else if (arg[0] is '\'' && arg[^1] is '\'') return Convert.ToChar(arg.Replace("\'", ""));
-            else if (arg.Contains('{')) return ParseArray(arg);
-            else if (byte.TryParse(arg, out var numInt16)) return numInt16;
-            else if (int.TryParse(arg, out var numInt32)) return numInt32;
-            else if (double.TryParse(arg.Replace('.',','), out var numDouble)) return numDouble;
-            else if (bool.TryParse(arg, out var boolValue)) return boolValue;
-            else if (CheckOnMathOperations(arg)) return _arithmeticManager.Calculate(arg);
-            else if (arg.Contains('.')) return ParseSubTask(arg);
-            else return Variables[arg];
+            if (arg[0] is '\"' && arg[^1] is '\"') return arg.Replace("\"", "");
+            if (arg[0] is '\'' && arg[^1] is '\'') return Convert.ToChar(arg.Replace("\'", ""));
+            if (arg[0] is '{' && arg[^1] is '}') return ParseArray(arg);
+            if (byte.TryParse(arg, out var numInt16)) return numInt16;
+            if (int.TryParse(arg, out var numInt32)) return numInt32;
+            if (double.TryParse(arg.Replace('.',','), out var numDouble)) return numDouble;
+            if (bool.TryParse(arg, out var boolValue)) return boolValue;
+            if (CheckOnMathOperations(arg)) return _arithmeticManager.Calculate(arg);
+            if (arg.Contains('.')) return ParseSubTask(arg);
+            return Variables[arg];
         }
         
         private object[] ParseArray(string str)
